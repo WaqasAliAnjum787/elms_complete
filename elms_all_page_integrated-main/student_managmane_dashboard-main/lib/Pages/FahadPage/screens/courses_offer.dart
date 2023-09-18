@@ -1,9 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
-import '../../FahadPage/model/holder.dart';
-import '../../FahadPage/model/rotate_animation_holder_manager.dart';
 
 import '../model/courses_model.dart';
 // import 'package:student_managment_app_screens/model/courses_model.dart';

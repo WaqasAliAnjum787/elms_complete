@@ -55,12 +55,8 @@ class FrontWidget extends StatelessWidget {
                 )),
             child: Padding(
               padding:
-                  EdgeInsets.only(left: width * 0.012, top: height * 0.012),
-              child: const FittedBox(
-                  child: Text(
-                'Tab to Swap',
-                softWrap: true,
-              )),
+                  EdgeInsets.only(left: width * 0.015, top: height * 0.015),
+              child: Text('Tab to Swap'),
             ),
           ))
     ]);

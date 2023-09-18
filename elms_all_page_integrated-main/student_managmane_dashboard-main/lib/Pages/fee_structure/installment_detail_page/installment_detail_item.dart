@@ -41,7 +41,7 @@ class InstallmentDetailItem extends StatelessWidget {
               padding: EdgeInsets.only(right: width * 0.19, left: width * 0.02),
               child: Text(
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: width * 0.035),
+                style: TextStyle(color: Colors.white, fontSize: width * 0.045),
                 leftSide,
               ),
             ),
@@ -63,7 +63,7 @@ class InstallmentDetailItem extends StatelessWidget {
                 child: Text(
                     textAlign: TextAlign.center,
                     style:
-                        TextStyle(color: Colors.white, fontSize: width * 0.035),
+                        TextStyle(color: Colors.white, fontSize: width * 0.048),
                     rightSide),
               ),
             ))

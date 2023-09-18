@@ -5,11 +5,12 @@ import 'package:student_managmane_dashboard/Pages/FahadPage/screens/first_page.d
 import 'package:student_managmane_dashboard/Pages/SplashScreen/flow/Dating_main_screen/view/dating_main_screen.dart';
 import 'package:student_managmane_dashboard/Pages/fee_structure/fee_structure_page.dart';
 import 'package:student_managmane_dashboard/Pages/group_details_page/group_details_page.dart';
+import 'package:student_managmane_dashboard/Pages/leaves_page/my_leaves/my_leaves.dart';
 import 'package:student_managmane_dashboard/Pages/login_page/login_page.dart';
 
 Route? onGenerateRout(RouteSettings settings) {
   if (settings.name == SplashScreen.name) {
-    return CupertinoPageRoute(builder: splashSceenBuilder);
+    return CupertinoPageRoute(builder: splashScreenBuilder);
   } else if (settings.name == Dashboard.name) {
     return CupertinoPageRoute(builder: dashboardBuilder);
   } else if (settings.name == GroupDetailsPage.name) {
@@ -21,8 +22,11 @@ Route? onGenerateRout(RouteSettings settings) {
   } else if (settings.name == FirstPage.name) {
     return CupertinoPageRoute(builder: firstPageBuilder);
   } else if (settings.name == LoginPage.name) {
-    return CupertinoPageRoute(builder: loginPageBuilder) ;
+    return CupertinoPageRoute(builder: loginPageBuilder);
+  } else if (settings.name == MyLeavesPage.name) {
+    return CupertinoPageRoute(builder: myLeavesPageBuilder);
   }
+  return null;
 }
 
 Widget dashboardBuilder(BuildContext context) {
@@ -45,10 +49,14 @@ Widget firstPageBuilder(BuildContext context) {
   return const FirstPage();
 }
 
-Widget splashSceenBuilder(BuildContext context) {
+Widget splashScreenBuilder(BuildContext context) {
   return const SplashScreen();
 }
 
 Widget loginPageBuilder(BuildContext context) {
   return const LoginPage();
+}
+
+Widget myLeavesPageBuilder(BuildContext context) {
+  return MyLeavesPage();
 }

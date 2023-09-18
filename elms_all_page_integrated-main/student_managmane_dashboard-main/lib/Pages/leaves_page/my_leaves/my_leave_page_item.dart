@@ -1,19 +1,13 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/helper_comp/crad_clipper.dart';
 
-class FeeInstallmentItem extends StatelessWidget {
-  const FeeInstallmentItem(
-      {super.key, required this.installment, required this.installmentNumber});
-  final String installment;
-  final int installmentNumber;
+class MyLeavePageItem extends StatelessWidget {
+  const MyLeavePageItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.sizeOf(context).height;
     double width = MediaQuery.sizeOf(context).width;
-
     return Padding(
       padding: const EdgeInsets.all(18.0),
       child: Stack(children: [
@@ -21,13 +15,12 @@ class FeeInstallmentItem extends StatelessWidget {
           height: height * 0.12,
           width: width * 0.9,
           decoration: const BoxDecoration(
+              color: Colors.white,
               boxShadow: [
                 BoxShadow(
                     blurRadius: 2, color: Colors.grey, offset: Offset(1, 1))
               ],
-              color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          alignment: Alignment.bottomCenter,
           child: const Padding(
             padding: EdgeInsets.only(bottom: 15),
           ),
@@ -35,7 +28,7 @@ class FeeInstallmentItem extends StatelessWidget {
         ClipPath(
           clipper: CardClipper(),
           child: Container(
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.center,
             height: height * 0.12,
             width: width * 0.3,
             decoration: const BoxDecoration(
@@ -44,12 +37,15 @@ class FeeInstallmentItem extends StatelessWidget {
                     bottomLeft: Radius.circular(20),
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20))),
-            child: Padding(
-              padding: EdgeInsets.only(left: width * 0.02, right: width * 0.05),
-              child: Text(
-                textAlign: TextAlign.center,
-                installment,
-                style: TextStyle(color: Colors.white, fontSize: width * 0.048),
+            child: FittedBox(
+              fit: BoxFit.fill,
+              child: Padding(
+                padding: EdgeInsets.only(right: width * 0.04),
+                child: Text(
+                  textAlign: TextAlign.center,
+                  "Days",
+                  style: const TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),
@@ -67,10 +63,10 @@ class FeeInstallmentItem extends StatelessWidget {
           ),
         ),
         Positioned(
-            left: width * 0.55,
+            left: width * 0.50,
             child: Container(
               height: height * 0.12,
-              width: width * 0.35,
+              width: width * 0.40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 38, 64, 125),
@@ -79,24 +75,29 @@ class FeeInstallmentItem extends StatelessWidget {
                       topLeft: Radius.circular(width * 0.12),
                       topRight: const Radius.circular(20),
                       bottomRight: const Radius.circular(20))),
+              child: Container(
+                height: height * 0.12,
+                width: width * 0.32,
+                alignment: Alignment.center,
+                child: Text(
+                  textAlign: TextAlign.center,
+                  "23",
+                  style: const TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
+                ),
+              ),
             )),
         Positioned(
-            left: width * 0.7,
-            top: height * 0.02,
+            left: width * 0.255,
+            top: height * 0.05,
             child: Container(
               alignment: Alignment.center,
-              height: height * 0.08,
-              width: width * 0.11,
+              height: height * 0.02,
+              width: width * 0.07,
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black),
-                  color: Colors.white,
-                  shape: BoxShape.circle),
-              child: Text(
-                installmentNumber.toString(),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: const Color.fromARGB(255, 0, 0, 0),
-                    fontSize: width * 0.048),
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.black),
+                color: const Color.fromARGB(255, 255, 255, 255),
               ),
             ))
       ]),
