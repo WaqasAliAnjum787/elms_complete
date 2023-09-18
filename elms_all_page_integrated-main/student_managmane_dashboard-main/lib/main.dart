@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => CardBloc(),
       child: MaterialApp(
+        showPerformanceOverlay: true,
         debugShowCheckedModeBanner: false,
         title: 'Student Management',
         theme: ThemeData(
