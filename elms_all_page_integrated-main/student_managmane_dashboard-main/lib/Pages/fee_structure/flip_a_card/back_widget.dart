@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 
 class BackWidget extends StatelessWidget {
   const BackWidget(
@@ -15,7 +16,7 @@ class BackWidget extends StatelessWidget {
       height: height * 0.22,
       width: width * 0.9,
       decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 38, 64, 125),
+          color: secondaryColor,
           borderRadius: BorderRadius.all(Radius.circular(30))),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Row(

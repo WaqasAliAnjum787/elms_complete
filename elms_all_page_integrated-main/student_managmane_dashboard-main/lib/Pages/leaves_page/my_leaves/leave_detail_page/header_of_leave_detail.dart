@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 
-class HeaderWidgetOfGroupDetails extends StatelessWidget {
-  const HeaderWidgetOfGroupDetails({super.key});
+class HeaderOfLeaveDetail extends StatelessWidget {
+  const HeaderOfLeaveDetail({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class HeaderWidgetOfGroupDetails extends StatelessWidget {
     return Stack(
       children: [
         ImageFiltered(
-          imageFilter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
+          imageFilter: ImageFilter.blur(sigmaX: 2.5, sigmaY: 2.5),
           child: Container(
             height: height * 0.22,
             width: width * 0.9,
@@ -21,7 +21,7 @@ class HeaderWidgetOfGroupDetails extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(30)),
                 image: DecorationImage(
                     image:
-                        AssetImage('assets/details_images/group_details.jpg'),
+                        AssetImage('assets/my_leaves/images/leave_details.jpg'),
                     fit: BoxFit.fill)),
             alignment: Alignment.center,
           ),
@@ -35,7 +35,7 @@ class HeaderWidgetOfGroupDetails extends StatelessWidget {
                 borderRadius: const BorderRadius.all(Radius.circular(30)),
                 color: Colors.white.withOpacity(0.3)),
             child: const Text(
-              'Group Details',
+              'Leave Details',
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 28,

@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 import 'package:student_managmane_dashboard/helper_comp/crad_clipper.dart';
 
 class MyLeavePageItem extends StatelessWidget {
-  const MyLeavePageItem({super.key});
+  const MyLeavePageItem(
+      {super.key,
+      required this.leftSideText,
+      required this.rightSideText,
+      required this.status});
+  final String leftSideText;
+  final String rightSideText;
+  final String status;
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +38,9 @@ class MyLeavePageItem extends StatelessWidget {
           child: Container(
             alignment: Alignment.center,
             height: height * 0.12,
-            width: width * 0.3,
+            width: width * 0.35,
             decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 38, 64, 125),
+                color: secondaryColor,
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     topLeft: Radius.circular(20),
@@ -43,21 +51,22 @@ class MyLeavePageItem extends StatelessWidget {
                 padding: EdgeInsets.only(right: width * 0.04),
                 child: Text(
                   textAlign: TextAlign.center,
-                  "Days",
-                  style: const TextStyle(color: Colors.white),
+                  leftSideText,
+                  style:
+                      TextStyle(color: Colors.white, fontSize: width * 0.048),
                 ),
               ),
             ),
           ),
         ),
         Positioned(
-          left: width * 0.26,
+          left: width * 0.31,
           top: height * 0.03,
           child: Container(
             height: height * 0.06,
             width: width * 0.06,
             decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 38, 64, 125),
+              color: secondaryColor,
               shape: BoxShape.circle,
             ),
           ),
@@ -69,26 +78,38 @@ class MyLeavePageItem extends StatelessWidget {
               width: width * 0.40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 38, 64, 125),
+                  color: secondaryColor,
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(width * 0.12),
                       topLeft: Radius.circular(width * 0.12),
                       topRight: const Radius.circular(20),
                       bottomRight: const Radius.circular(20))),
               child: Container(
-                height: height * 0.12,
-                width: width * 0.32,
-                alignment: Alignment.center,
-                child: Text(
-                  textAlign: TextAlign.center,
-                  "23",
-                  style: const TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
-                ),
-              ),
+                  height: height * 0.12,
+                  width: width * 0.32,
+                  alignment: Alignment.center,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        textAlign: TextAlign.center,
+                        rightSideText,
+                        style: TextStyle(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            fontSize: width * 0.048),
+                      ),
+                      Text(
+                        textAlign: TextAlign.center,
+                        status,
+                        style: TextStyle(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            fontSize: width * 0.035),
+                      ),
+                    ],
+                  )),
             )),
         Positioned(
-            left: width * 0.255,
+            left: width * 0.305,
             top: height * 0.05,
             child: Container(
               alignment: Alignment.center,

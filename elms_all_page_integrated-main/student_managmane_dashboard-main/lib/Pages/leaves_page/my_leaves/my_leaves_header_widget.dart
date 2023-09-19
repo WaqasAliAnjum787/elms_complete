@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 
 class MyLeavesHeaderWidget extends StatelessWidget {
   const MyLeavesHeaderWidget({super.key});
@@ -33,8 +34,7 @@ class MyLeavesHeaderWidget extends StatelessWidget {
                 width: width * 0.9,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                    border: Border.all(
-                        color: const Color.fromARGB(255, 38, 64, 125)),
+                    border: Border.all(color: secondaryColor),
                     borderRadius: const BorderRadius.all(Radius.circular(30)),
                     color: Colors.white.withOpacity(0.3)),
                 child: const Text(

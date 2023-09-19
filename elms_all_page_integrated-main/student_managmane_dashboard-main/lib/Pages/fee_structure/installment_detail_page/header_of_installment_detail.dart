@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 
 class HeaderOfInstallmentDetails extends StatelessWidget {
   const HeaderOfInstallmentDetails({super.key});
@@ -31,7 +32,7 @@ class HeaderOfInstallmentDetails extends StatelessWidget {
             alignment: Alignment.center,
             decoration: BoxDecoration(
                 border: Border.all(
-                  color: const Color.fromARGB(255, 38, 64, 125),
+                  color: secondaryColor,
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(30)),
                 color: Colors.white.withOpacity(0.1)),

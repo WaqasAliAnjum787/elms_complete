@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 import 'package:student_managmane_dashboard/Pages/fee_structure/installment_detail_page/installment_detail_item_clipper.dart';
 
-class InstallmentDetailItem extends StatelessWidget {
-  const InstallmentDetailItem(
+class LeaveDetailItem extends StatelessWidget {
+  const LeaveDetailItem(
       {super.key, required this.leftSide, required this.rightSide});
   final String leftSide;
   final String rightSide;

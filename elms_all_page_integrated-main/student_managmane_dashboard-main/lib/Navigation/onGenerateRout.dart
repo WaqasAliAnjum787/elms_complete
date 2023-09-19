@@ -5,7 +5,8 @@ import 'package:student_managmane_dashboard/Pages/FahadPage/screens/first_page.d
 import 'package:student_managmane_dashboard/Pages/SplashScreen/flow/Dating_main_screen/view/dating_main_screen.dart';
 import 'package:student_managmane_dashboard/Pages/fee_structure/fee_structure_page.dart';
 import 'package:student_managmane_dashboard/Pages/group_details_page/group_details_page.dart';
-import 'package:student_managmane_dashboard/Pages/leaves_page/my_leaves/my_leaves.dart';
+import 'package:student_managmane_dashboard/Pages/leaves_page/my_leaves/leave_detail_page/leave_detail_page.dart';
+import 'package:student_managmane_dashboard/Pages/leaves_page/my_leaves/my_leaves_page.dart';
 import 'package:student_managmane_dashboard/Pages/login_page/login_page.dart';
 
 Route? onGenerateRout(RouteSettings settings) {
@@ -25,6 +26,8 @@ Route? onGenerateRout(RouteSettings settings) {
     return CupertinoPageRoute(builder: loginPageBuilder);
   } else if (settings.name == MyLeavesPage.name) {
     return CupertinoPageRoute(builder: myLeavesPageBuilder);
+  } else if (settings.name == LeaveDetailPage.name) {
+    return CupertinoPageRoute(builder: leaveDetailPage);
   }
   return null;
 }
@@ -59,4 +62,8 @@ Widget loginPageBuilder(BuildContext context) {
 
 Widget myLeavesPageBuilder(BuildContext context) {
   return MyLeavesPage();
+}
+
+Widget leaveDetailPage(BuildContext context) {
+  return const LeaveDetailPage();
 }

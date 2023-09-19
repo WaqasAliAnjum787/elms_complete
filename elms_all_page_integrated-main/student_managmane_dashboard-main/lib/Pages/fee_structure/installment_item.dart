@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 import 'package:student_managmane_dashboard/helper_comp/crad_clipper.dart';
 
 class FeeInstallmentItem extends StatelessWidget {
@@ -39,7 +40,7 @@ class FeeInstallmentItem extends StatelessWidget {
             height: height * 0.12,
             width: width * 0.3,
             decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 38, 64, 125),
+                color: secondaryColor,
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     topLeft: Radius.circular(20),
@@ -61,7 +62,7 @@ class FeeInstallmentItem extends StatelessWidget {
             height: height * 0.06,
             width: width * 0.06,
             decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 38, 64, 125),
+              color: secondaryColor,
               shape: BoxShape.circle,
             ),
           ),
@@ -73,7 +74,7 @@ class FeeInstallmentItem extends StatelessWidget {
               width: width * 0.35,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 38, 64, 125),
+                  color: secondaryColor,
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(width * 0.12),
                       topLeft: Radius.circular(width * 0.12),
@@ -94,9 +95,7 @@ class FeeInstallmentItem extends StatelessWidget {
               child: Text(
                 installmentNumber.toString(),
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: const Color.fromARGB(255, 0, 0, 0),
-                    fontSize: width * 0.048),
+                style: TextStyle(color: Colors.black, fontSize: width * 0.048),
               ),
             ))
       ]),

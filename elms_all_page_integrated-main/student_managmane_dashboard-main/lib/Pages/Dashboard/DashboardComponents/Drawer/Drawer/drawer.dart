@@ -4,7 +4,7 @@ import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 import 'package:student_managmane_dashboard/Pages/Dashboard/DashboardComponents/Drawer/DrawerComponents/drawer_helper.dart';
 import 'package:student_managmane_dashboard/Pages/Dashboard/DashboardComponents/Drawer/DrawerComponents/drawer_item_modal.dart';
 import 'package:student_managmane_dashboard/Pages/Dashboard/DashboardComponents/Drawer/DrawerComponents/item.dart';
-import 'package:student_managmane_dashboard/Pages/leaves_page/my_leaves/my_leaves.dart';
+import 'package:student_managmane_dashboard/Pages/leaves_page/my_leaves/my_leaves_page.dart';
 import 'package:student_managmane_dashboard/ScreenSizes/screen_size.dart';
 
 import '../Clipper/clipper.dart';

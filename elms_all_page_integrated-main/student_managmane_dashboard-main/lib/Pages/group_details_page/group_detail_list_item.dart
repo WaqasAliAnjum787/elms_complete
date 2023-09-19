@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 import 'package:student_managmane_dashboard/helper_comp/crad_clipper.dart';
 
 class GroupDetailListItem extends StatelessWidget {
@@ -37,7 +38,7 @@ class GroupDetailListItem extends StatelessWidget {
             height: height * 0.12,
             width: width * 0.3,
             decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 38, 64, 125),
+                color: secondaryColor,
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     topLeft: Radius.circular(20),
@@ -62,7 +63,7 @@ class GroupDetailListItem extends StatelessWidget {
             height: height * 0.06,
             width: width * 0.06,
             decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 38, 64, 125),
+              color: secondaryColor,
               shape: BoxShape.circle,
             ),
           ),
@@ -74,7 +75,7 @@ class GroupDetailListItem extends StatelessWidget {
               width: width * 0.40,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 38, 64, 125),
+                  color: secondaryColor,
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(width * 0.12),
                       topLeft: Radius.circular(width * 0.12),

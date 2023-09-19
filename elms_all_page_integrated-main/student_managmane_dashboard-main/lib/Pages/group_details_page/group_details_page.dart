@@ -6,8 +6,8 @@ import 'package:student_managmane_dashboard/helper_comp/list_helper.dart';
 import 'package:transformable_list_view/transformable_list_view.dart';
 
 class GroupDetailsPage extends StatefulWidget {
-  GroupDetailsPage({super.key});
-  static const name = 'groupDetail';
+  const GroupDetailsPage({super.key});
+  static const String name = 'groupDetail';
 
   @override
   State<GroupDetailsPage> createState() => _GroupDetailsPageState();
