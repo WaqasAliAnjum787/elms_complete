@@ -1,143 +1,7 @@
-// // import 'package:animated_list/casiasn.dart';
-// // import 'package:animated_list/services.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter_application_2/music_slide_animation/idial_file/liabrary_item.dart';
-// import 'student_model.dart';
-// import 'navigation_service.dart';
-
-// class StudentListWidget extends StatefulWidget {
-//   const StudentListWidget({super.key});
-
-//   @override
-//   State<StudentListWidget> createState() => _StudentListWidgetState();
-// }
-
-// class _StudentListWidgetState extends State<StudentListWidget> {
-//   late final PageController _studentController;
-//   late final PageController _headingController;
-//   late double _currentPosition;
-//   late int _currentHeading;
-
-//   void _navigationListener() {
-//     //set state called
-//     setState(() {
-//       _currentPosition = _studentController.page!;
-
-//       if (_currentPosition.round() != _currentHeading) {
-//         _currentHeading = _currentPosition.round();
-//         _headingController.animateToPage(_currentHeading,
-//             duration: const Duration(milliseconds: 50),
-//             curve: Curves.bounceOut);
-//       }
-//     });
-//   }
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _studentController = PageController(viewportFraction: 0.5, initialPage: 0);
-//     _headingController = PageController(
-//         viewportFraction: 1,
-//         initialPage: CasianSeniours.listOfStudents.length - 1);
-//     _currentPosition = _studentController.initialPage.toDouble();
-//     _currentHeading = _headingController.initialPage;
-//     _studentController.addListener(_navigationListener);
-//   }
-
-//   @override
-//   void dispose() {
-//     _studentController.removeListener(_navigationListener);
-//     super.dispose();
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Stack(
-//       children: [
-//         // IMAGES OF CASIANS
-//         Transform.scale(
-//           alignment: Alignment.bottomCenter,
-//           scale: 2.3,
-//           child: PageView.builder(
-//               controller: _studentController,
-//               itemCount: CasianSeniours.listOfStudents.length,
-//               clipBehavior: Clip.none,
-//               scrollDirection: Axis.vertical,
-//               itemBuilder: (context, index) {
-//                 if (index == 0) {
-//                   // return const SizedBox.shrink();
-//                 }
-//                 // we need to know how much index is far from the current page to scale it
-//                 final double distance = (_currentPosition - index + 1).abs();
-//                 final isNotOnScreen = (_currentPosition - index + 1) > 0;
-//                 final double scale =
-//                     1 - distance * .345 * (isNotOnScreen ? 1 : -1);
-//                 final double translateY = (1 - scale).abs() *
-//                         MediaQuery.of(context).size.height /
-//                         1.5 +
-//                     20 * (distance - 1).clamp(0.0, 1);
-//                 return Padding(
-//                     padding: EdgeInsets.only(
-//                         bottom: MediaQuery.of(context).size.height * .1),
-//                     child: Transform(
-//                       transform: Matrix4.identity()
-//                         ..setEntry(3, 2, 0.001)
-//                         ..translate(0.0, !isNotOnScreen ? 0.0 : translateY)
-//                         ..scale(scale),
-//                       alignment: Alignment.bottomCenter,
-//                       child: LiabraryItem(index: index),
-//                     ));
-//               }),
-//         ),
-
-//         // TEXT FOR NAME OF CASIANS
-//         Column(
-//           mainAxisAlignment: MainAxisAlignment.start,
-//           crossAxisAlignment: CrossAxisAlignment.center,
-//           children: [
-//             Container(
-//               color: Colors.blue,
-//               height: 60,
-//               child: PageView.builder(
-//                   controller: _headingController,
-//                   itemCount: CasianSeniours.listOfStudents.length,
-//                   scrollDirection: Axis.horizontal,
-//                   itemBuilder: (context, index) {
-//                     final CasianSeniours item =
-//                         CasianSeniours.listOfStudents[index];
-
-//                     return Padding(
-//                       padding: const EdgeInsets.symmetric(horizontal: 80),
-//                       child: Center(
-//                         child: FittedBox(
-//                           child: Text(
-//                             item.name,
-//                             // style: titleStyle,
-//                             textAlign: TextAlign.center,
-//                           ),
-//                         ),
-//                       ),
-//                     );
-//                   }),
-//             ),
-//           ],
-//         ),
-//       ],
-//     );
-//   }
-// }
-
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import '../../FahadPage/model/Stories.dart';
-import '../../FahadPage/model/holder.dart';
-// import 'package:flutter_application_2/music_slide_animation/animated_list/student_model.dart'/;
-import '../../FahadPage/rotate_student_image_container.dart/liabrary_item.dart';
-// import 'package:flutter_application_2/screens/back_side_page.dart';
-import '../../FahadPage/screens/first_page.dart';
-
-// import 'navigation_service.dart';
+import '../../model/Stories.dart';
+import '../../model/holder.dart';
+import 'SuccessCasiansAnimatedListWidgets/CasiansImageLiabrayItem/liabrary_item.dart';
 
 class CasianAnimatedListPage extends StatefulWidget {
   const CasianAnimatedListPage({super.key});
@@ -186,15 +50,16 @@ class _CasianAnimatedListPageState extends State<CasianAnimatedListPage> {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
+    // double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          // ...........
+          // ...........FIRST STACK
           ..._buildBackground(),
-          // ....FIRST STACK .... FOR ANIMATED LIST..................................
+
+          // ....Second STACK .... FOR ANIMATED LIST..................................
 
           Transform.scale(
             alignment: Alignment.bottomCenter,
@@ -243,22 +108,7 @@ class _CasianAnimatedListPageState extends State<CasianAnimatedListPage> {
                 }),
           ),
 
-          // .SECOND STACK...........TEXT AT TOP FOR NAME OF CASIANS..........................
-          // Container(
-          //     height: height * 0.15,
-          //     decoration: BoxDecoration(
-          //       gradient: LinearGradient(
-          //         begin: Alignment.topCenter,
-          //         end: Alignment.bottomCenter,
-          //         stops: [.6, 1],
-          //         colors: [
-          //           Color.fromARGB(255, 241, 238, 238),
-          //           const Color.fromARGB(255, 44, 43, 43).withOpacity(0.0),
-          //         ],
-          //       ),
-          //     ),
-          //     // TOP TEXT NAME OF CASIANS
-          //     child: ),
+          // ...THIRD STACH................TEXT AT BOTTOM OF ANIMATED LIST.............
 
           Column(
             mainAxisAlignment: MainAxisAlignment.end,

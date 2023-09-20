@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'animated_back_side_page.dart';
+import 'FirstPageWidgets/AnimatedBackGround/animated_back_side_page.dart';
 
-import 'front_Side_page.dart';
+import 'FirstPageWidgets/FrontSide/front_Side_page.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -14,14 +14,15 @@ class FirstPage extends StatelessWidget {
     // double width = size.width;
     // double height = size.height;
 
-    return const Scaffold(
-      backgroundColor: Color.fromARGB(250, 21, 18, 46),
-      // backgroundColor: Colors.teal.shade100,
+    return Scaffold(
+      backgroundColor: Colors.blue.shade200,
+      // backgroundColor: Colors.blue,
+      // backgroundColor: Colors.tealAccent,
       body: SafeArea(
         child: Stack(
           children: [
             // ......
-            AnimatedBackGround(),
+            // AnimatedBackGround(),
 
             // ......
             FrontSideOfFirstPage(),

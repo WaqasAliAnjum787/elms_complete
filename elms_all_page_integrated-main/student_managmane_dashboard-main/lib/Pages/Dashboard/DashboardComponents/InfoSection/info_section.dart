@@ -3,7 +3,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Pages/Dashboard/DashboardComponents/InfoSection/helper_class.dart';
 import 'package:student_managmane_dashboard/Pages/Dashboard/DashboardComponents/InfoSection/info_section_item.dart';
-import 'package:student_managmane_dashboard/Pages/FahadPage/screens/casian_animated_list.dart';
+import 'package:student_managmane_dashboard/Pages/FahadPage/screens/SuccessCasiansAnimatedListPage/casian_animated_list.dart';
 import 'package:student_managmane_dashboard/Pages/fee_structure/fee_structure_page.dart';
 import 'package:student_managmane_dashboard/Pages/group_details_page/group_details_page.dart';
 import 'package:student_managmane_dashboard/ScreenSizes/screen_size.dart';

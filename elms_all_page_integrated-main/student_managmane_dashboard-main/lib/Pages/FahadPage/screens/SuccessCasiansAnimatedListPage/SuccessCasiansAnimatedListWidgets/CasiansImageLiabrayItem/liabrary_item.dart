@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'featured_library_items.dart';
+import 'CasiansImageLiabrayItemWidgets/ImageFeatureLiabraryItem/featured_library_items.dart';
 
 class LiabraryItem extends StatefulWidget {
   const LiabraryItem({required this.index, super.key});
@@ -19,7 +19,7 @@ class _LiabraryItemState extends State<LiabraryItem>
   void initState() {
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 100),
+      duration: const Duration(milliseconds: 100),
     );
 
     super.initState();

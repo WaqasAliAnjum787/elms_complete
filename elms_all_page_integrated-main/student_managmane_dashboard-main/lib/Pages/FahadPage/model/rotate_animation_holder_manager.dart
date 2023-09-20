@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import '../rotate_student_image_container.dart/image_wrapper.dart';
+import '../screens/CasiansStudentDetailPage/CasianStduentDetailWidgets/image_wrapper.dart';
 
 // import 'package:flutter_playlist_animation/widgets/image_wrapper.dart';
 

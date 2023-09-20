@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
-import 'package:student_managmane_dashboard/Pages/FahadPage/screens/first_page.dart';
+import 'package:student_managmane_dashboard/Pages/FahadPage/screens/FirstPage/first_page.dart';
 import '../../../../SplashScreen/flow/Dating_main_screen/widgets/dating_screen_widgets.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';

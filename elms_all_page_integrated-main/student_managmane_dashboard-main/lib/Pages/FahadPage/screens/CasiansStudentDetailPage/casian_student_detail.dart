@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../model/rotate_animation_holder_manager.dart';
-import '../rotate_student_image_container.dart/image_wrapper.dart';
+import '../../model/rotate_animation_holder_manager.dart';
+import 'CasianStduentDetailWidgets/image_wrapper.dart';
+import 'CasianStduentDetailWidgets/TextDetailAboutCasian.dart';
 
 class CasianStudentDetail extends StatefulWidget {
   const CasianStudentDetail(
@@ -87,83 +88,16 @@ class _CasianStudentDetailState extends State<CasianStudentDetail> {
             ),
           ),
 
-          SizedBox(
-            height: height * 0.03,
-          ),
-          //.................................................................... NAME OF CASIAN STUDENT
-          SizedBox(
-              width: width * 0.5,
-              // height: height * 0.1,
-              child: FittedBox(
-                  child: Text(
-                widget.name,
-                style: const TextStyle(fontWeight: FontWeight.w900),
-              ))),
-
-          SizedBox(
-            height: height * 0.02,
-          ),
-
-          //.................................................................... CURRENT POSITION OF CASION STUDENT
-          SizedBox(
-              width: width * 0.6,
-              child: FittedBox(child: Text(widget.currentPosition))),
           // SizedBox(
-          //   height: height * 0.02,
+          //   height: height * 0.03,
           // ),
 
-          //.................................................................... COMPANNY OF CASIAN STUDENT
-          SizedBox(
-              width: width * 0.5,
-              child: FittedBox(child: Text(widget.companny))),
-          // SizedBox(
-          //   height: height * 0.02,
-          // ),
-
-          // ................................................................... LINKDIN BUTTON
-          GestureDetector(
-            //
-            onTap: () {},
-            //
-            child: Align(
-              // alignment: Alignment.center,
-              child: Container(
-                width: width,
-                // height: height * 0.35,
-                // color: Colors.amber,
-
-                // ROW IN CONTAINER
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // ICON IN BTN CONTAINER
-                    SizedBox(
-                      width: width * 0.12,
-                      child: const FittedBox(
-                        child: Icon(
-                          Icons.link_outlined,
-                          color: Colors.purple,
-                        ),
-                      ),
-                    ),
-
-                    // TEXT IN BTN CONTAINER
-                    SizedBox(
-                      width: width * 0.2,
-                      child: const FittedBox(
-                        child: Text(
-                          'Linkdin',
-                          style: TextStyle(
-                              color: Colors.purple,
-                              decoration: TextDecoration.underline),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          )
+          TextDeatilAboutCasian(
+              name: widget.name,
+              currentPosition: widget.currentPosition,
+              companny: widget.companny,
+              width: width * 0.9,
+              height: height * 0.5)
         ],
       ),
     );

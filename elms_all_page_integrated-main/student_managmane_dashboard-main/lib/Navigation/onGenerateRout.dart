@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:student_managmane_dashboard/Pages/Dashboard/DashboardPage/dashboard_page.dart';
-import 'package:student_managmane_dashboard/Pages/FahadPage/screens/casian_animated_list.dart';
-import 'package:student_managmane_dashboard/Pages/FahadPage/screens/first_page.dart';
+import 'package:student_managmane_dashboard/Pages/FahadPage/screens/FirstPage/first_page.dart';
+import 'package:student_managmane_dashboard/Pages/FahadPage/screens/SuccessCasiansAnimatedListPage/casian_animated_list.dart';
 import 'package:student_managmane_dashboard/Pages/SplashScreen/flow/Dating_main_screen/view/dating_main_screen.dart';
 import 'package:student_managmane_dashboard/Pages/fee_structure/fee_structure_page.dart';
 import 'package:student_managmane_dashboard/Pages/group_details_page/group_details_page.dart';

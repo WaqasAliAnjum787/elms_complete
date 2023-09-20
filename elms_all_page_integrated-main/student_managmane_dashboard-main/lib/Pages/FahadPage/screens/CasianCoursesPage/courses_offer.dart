@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
-
-import '../model/courses_model.dart';
-// import 'package:student_managment_app_screens/model/courses_model.dart';
-// import 'package:student_managment_app_screens/screens/back_side_page.dart';
+import '../../model/courses_model.dart';
 
 class CoursesOfferPage extends StatefulWidget {
   const CoursesOfferPage({super.key});
@@ -29,15 +26,15 @@ class _CoursesOfferPageState extends State<CoursesOfferPage>
     super.initState();
     _casAnimationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 700));
-    _alignAnimation =
-        Tween<AlignmentGeometry>(begin: Alignment(1.5, 0), end: Alignment(0, 0))
-            .animate(_casAnimationController);
+    _alignAnimation = Tween<AlignmentGeometry>(
+            begin: const Alignment(1.5, 0), end: const Alignment(0, 0))
+        .animate(_casAnimationController);
     _scalAnimation =
         Tween<double>(begin: 0, end: 1).animate(_casAnimationController);
     _tweenAnimation = Tween<double>(begin: 0, end: rotation);
 
-    _iconController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 500));
+    _iconController = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 500));
 
     iconOffsetAnimation = Tween(begin: -100.0, end: 0.0).animate(
       CurvedAnimation(
@@ -61,35 +58,6 @@ class _CoursesOfferPageState extends State<CoursesOfferPage>
     Size size = MediaQuery.of(context).size;
     double width = size.width;
     double height = size.height;
-    // double widthOfCouseCOntainer = 0;
-    // double heightOfCouseCOntainer = 0;
-
-    // return Scaffold(
-    // body: Column(children: [
-    //   Container(
-    //     height: height * 0.2,
-    //     width: width,
-    //     decoration: BoxDecoration(
-    //         color: Colors.blueAccent,
-    //         borderRadius: BorderRadius.only(
-    //             bottomLeft: Radius.circular(5),
-    //             bottomRight: Radius.circular(5))),
-    //     child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-    //       SizedBox(
-    //           height: height * 0.05,
-    //           child: Image.asset('assets/images/caslogo.png')),
-    //       Text(
-    //         'Courses We Offer',
-    //         style: TextStyle(shadows: [
-    //           BoxShadow(offset: Offset(1, 1), color: Colors.black38)
-    //         ]),
-    //       )
-    //     ]),
-    //   )
-    // ]),
-    // );
-
-// ..........................................................................
 
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 228, 225, 224),
@@ -104,28 +72,41 @@ class _CoursesOfferPageState extends State<CoursesOfferPage>
                   fit: BoxFit.cover)),
         ),
 
-        // AnimatedBackGround(),
+        // AnimatedBuilder(
+        //     animation: iconOffsetAnimation,
+        //     builder: (context, child) {
+        //       return Transform.translate(
+        //           offset: Offset(iconOffsetAnimation.value, 0),
+        //           child: GestureDetector(
+        //             onTap: () {
+        //               Navigator.pop(context);
 
-        AnimatedBuilder(
-            animation: iconOffsetAnimation,
-            builder: (context, child) {
-              return Transform.translate(
-                  offset: Offset(iconOffsetAnimation.value, 0),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
+        //               _iconController.reverse();
+        //             },
+        //             child: const Align(
+        //               alignment: Alignment(-0.85, -0.85),
+        //               child: Icon(
+        //                 Icons.arrow_back,
+        //                 color: Colors.white,
+        //               ),
+        //             ),
+        //           ));
+        //     }),
 
-                      _iconController.reverse();
-                    },
-                    child: const Align(
-                      alignment: Alignment(-0.85, -0.85),
-                      child: Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ));
-            }),
+        GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+
+            _iconController.reverse();
+          },
+          child: const Align(
+            alignment: Alignment(-0.85, -0.85),
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
+          ),
+        ),
 
         //...................................................................... Second Stack Child ( TEXT TITLE & ICON )
 
@@ -178,6 +159,7 @@ class _CoursesOfferPageState extends State<CoursesOfferPage>
               ]),
             ),
           ),
+
           //.................................................................... COURSES CONTAINER
         ]),
         Align(
@@ -187,9 +169,7 @@ class _CoursesOfferPageState extends State<CoursesOfferPage>
               height: height * 0.8,
               child: Container(
                 clipBehavior: Clip.antiAlias,
-                // padding: EdgeInsets.only(top: 10),
                 decoration: BoxDecoration(
-                    // color: const Color.fromARGB(250, 21, 18, 46),
                     gradient: const LinearGradient(colors: [
                       Color.fromARGB(230, 255, 255, 255),
                       Color.fromARGB(95, 37, 36, 36),
@@ -197,6 +177,7 @@ class _CoursesOfferPageState extends State<CoursesOfferPage>
                     ]),
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(width * 0.15))),
+
                 // ........................................................... LIST OF COURSES
 
                 child: ListView.builder(
@@ -224,15 +205,16 @@ class _CoursesOfferPageState extends State<CoursesOfferPage>
                                     onTap: () {
                                       // ....................................... Dialoge For Open Image By Click On InkWell
                                       showGeneralDialog(
+                                        barrierDismissible: true,
+                                        barrierLabel: 'New',
                                         context: context,
-                                        // anchorPoint: Offset(400, 400),
                                         pageBuilder: (context, animation,
                                             secondaryAnimation) {
                                           // ...............................Tween Builder for animtion During open of Dialoge
                                           return TweenAnimationBuilder(
                                             tween: _tweenAnimation,
-                                            duration:
-                                                Duration(milliseconds: 500),
+                                            duration: const Duration(
+                                                milliseconds: 400),
                                             builder: (context, value, child) =>
                                                 Transform.scale(
                                               scale: value,
@@ -283,7 +265,6 @@ class _CoursesOfferPageState extends State<CoursesOfferPage>
                                       );
                                     },
                                     child: Container(
-                                      // height: (height * 0.8) * 0.5,
                                       decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(
                                                   height * 0.8) *
@@ -292,13 +273,7 @@ class _CoursesOfferPageState extends State<CoursesOfferPage>
                                             BoxShadow(
                                                 color: Colors.black26,
                                                 offset: Offset(3, 3),
-                                                // spreadRadius: 2,
                                                 blurRadius: 5),
-                                            // BoxShadow(
-                                            //     color: Colors.white38,
-                                            //     offset: Offset(3, 3),
-                                            //     spreadRadius: 2,
-                                            //     blurRadius: 2),
                                           ],
                                           color: Colors.white),
                                       child: Column(

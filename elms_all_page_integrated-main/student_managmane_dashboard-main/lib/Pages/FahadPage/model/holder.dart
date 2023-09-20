@@ -135,14 +135,14 @@ class DataHolder {
         position: 18,
         name: 'Ahmad Zafar',
         currentPosition: 'Flutter Developer',
-        company: '',
+        company: '.',
         imageUrl: 'assets/images/Image 1.png',
         linkdinProfile: ''),
     Stories(
         position: 19,
         name: 'Sheroz',
         currentPosition: 'Flutter Developer',
-        company: '',
+        company: '.',
         imageUrl: 'assets/images/Image 1.png',
         linkdinProfile: ''),
     Stories(
