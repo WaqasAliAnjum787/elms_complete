@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'FirstPageWidgets/AnimatedBackGround/animated_back_side_page.dart';
-
 import 'FirstPageWidgets/FrontSide/front_Side_page.dart';
 
 class FirstPage extends StatelessWidget {
@@ -15,6 +12,7 @@ class FirstPage extends StatelessWidget {
     // double height = size.height;
 
     return Scaffold(
+      // backgroundColor: Color.fromARGB(255, 214, 236, 254),
       backgroundColor: Colors.blue.shade200,
       // backgroundColor: Colors.blue,
       // backgroundColor: Colors.tealAccent,

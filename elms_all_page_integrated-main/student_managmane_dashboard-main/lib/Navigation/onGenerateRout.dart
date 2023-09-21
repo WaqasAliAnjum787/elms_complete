@@ -3,6 +3,7 @@ import 'package:student_managmane_dashboard/Pages/Dashboard/DashboardPage/dashbo
 import 'package:student_managmane_dashboard/Pages/FahadPage/screens/FirstPage/first_page.dart';
 import 'package:student_managmane_dashboard/Pages/FahadPage/screens/SuccessCasiansAnimatedListPage/casian_animated_list.dart';
 import 'package:student_managmane_dashboard/Pages/SplashScreen/flow/Dating_main_screen/view/dating_main_screen.dart';
+import 'package:student_managmane_dashboard/Pages/StudentTimeTracking/student_time_tracker_main.dart';
 import 'package:student_managmane_dashboard/Pages/fee_structure/fee_structure_page.dart';
 import 'package:student_managmane_dashboard/Pages/group_details_page/group_details_page.dart';
 import 'package:student_managmane_dashboard/Pages/leaves_page/my_leaves/leave_detail_page/leave_detail_page.dart';
@@ -28,6 +29,8 @@ Route? onGenerateRout(RouteSettings settings) {
     return CupertinoPageRoute(builder: myLeavesPageBuilder);
   } else if (settings.name == LeaveDetailPage.name) {
     return CupertinoPageRoute(builder: leaveDetailPage);
+  } else if (settings.name == TimeTrackerPage.name) {
+    return CupertinoPageRoute(builder: studentTimeTrackerPage);
   }
   return null;
 }
@@ -66,4 +69,8 @@ Widget myLeavesPageBuilder(BuildContext context) {
 
 Widget leaveDetailPage(BuildContext context) {
   return const LeaveDetailPage();
+}
+
+Widget studentTimeTrackerPage(BuildContext context) {
+  return const TimeTrackerPage();
 }

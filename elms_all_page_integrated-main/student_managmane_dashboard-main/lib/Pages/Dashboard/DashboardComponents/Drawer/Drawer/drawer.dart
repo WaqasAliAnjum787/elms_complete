@@ -153,7 +153,35 @@ class _SideDrawerState extends State<SideDrawer>
     DrawerItemModal item = helper.items[index];
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, MyLeavesPage.name);
+        switch (index) {
+          case 0:
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text('Profile Clicked')));
+            break;
+          case 1:
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text('Apply for leave')));
+            break;
+
+          case 2:
+            Navigator.pushNamed(context, MyLeavesPage.name);
+            break;
+
+          case 3:
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text('Join Meeting')));
+            break;
+
+          case 4:
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text('Stop  Tracking ')));
+            break;
+
+          case 5:
+            ScaffoldMessenger.of(context)
+                .showSnackBar(SnackBar(content: Text('Logout Clicked')));
+            break;
+        }
       },
       child: DrawerItem(
         icon: item.icon,

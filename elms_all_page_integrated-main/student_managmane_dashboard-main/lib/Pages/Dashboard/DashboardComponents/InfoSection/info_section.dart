@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Pages/Dashboard/DashboardComponents/InfoSection/helper_class.dart';
 import 'package:student_managmane_dashboard/Pages/Dashboard/DashboardComponents/InfoSection/info_section_item.dart';
 import 'package:student_managmane_dashboard/Pages/FahadPage/screens/SuccessCasiansAnimatedListPage/casian_animated_list.dart';
+import 'package:student_managmane_dashboard/Pages/StudentTimeTracking/student_time_tracker_main.dart';
 import 'package:student_managmane_dashboard/Pages/fee_structure/fee_structure_page.dart';
 import 'package:student_managmane_dashboard/Pages/group_details_page/group_details_page.dart';
 import 'package:student_managmane_dashboard/ScreenSizes/screen_size.dart';
@@ -62,8 +63,7 @@ class _InfoSectionViewerState extends State<InfoSectionViewer>
                   } else if (index == 1) {
                     Navigator.pushNamed(context, FeeStructurePage.name);
                   } else if (index == 2) {
-                    ScaffoldMessenger.of(context)
-                        .showSnackBar(SnackBar(content: Text('$index')));
+                    Navigator.pushNamed(context, TimeTrackerPage.name);
                   } else {
                     Navigator.of(context)
                         .pushNamed(CasianAnimatedListPage.name);
