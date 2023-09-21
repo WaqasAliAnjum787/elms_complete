@@ -8,7 +8,7 @@ import 'package:student_managmane_dashboard/Pages/fee_structure/fee_structure_pa
 import 'package:student_managmane_dashboard/Pages/group_details_page/group_details_page.dart';
 import 'package:student_managmane_dashboard/Pages/leaves_page/my_leaves/leave_detail_page/leave_detail_page.dart';
 import 'package:student_managmane_dashboard/Pages/leaves_page/my_leaves/my_leaves_page.dart';
-import 'package:student_managmane_dashboard/Pages/login_page/login_page.dart';
+import 'package:student_managmane_dashboard/Pages/login_page/module/home/presentation/home_screen.dart';
 
 Route? onGenerateRout(RouteSettings settings) {
   if (settings.name == SplashScreen.name) {

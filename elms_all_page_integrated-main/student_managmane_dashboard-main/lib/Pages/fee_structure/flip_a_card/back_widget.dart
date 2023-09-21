@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 
@@ -26,7 +27,8 @@ class BackWidget extends StatelessWidget {
               alignment: Alignment.center,
               height: height * 0.08,
               width: width * 0.35,
-              child: const Text(
+              child: const AutoSizeText(
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(color: Colors.white, fontSize: 20),
                   textAlign: TextAlign.center,
                   "Total Amount"),
@@ -35,7 +37,8 @@ class BackWidget extends StatelessWidget {
               alignment: Alignment.center,
               height: height * 0.08,
               width: width * 0.35,
-              child: Text(
+              child: AutoSizeText(
+                overflow: TextOverflow.ellipsis,
                 totalAmount.toString(),
                 style: const TextStyle(color: Colors.white, fontSize: 20),
                 textAlign: TextAlign.center,
@@ -50,7 +53,8 @@ class BackWidget extends StatelessWidget {
               alignment: Alignment.center,
               height: height * 0.08,
               width: width * 0.35,
-              child: const Text(
+              child: const AutoSizeText(
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(color: Colors.white, fontSize: 20),
                   textAlign: TextAlign.center,
                   "Installments"),
@@ -59,7 +63,8 @@ class BackWidget extends StatelessWidget {
               alignment: Alignment.center,
               height: height * 0.08,
               width: width * 0.35,
-              child: Text(
+              child: AutoSizeText(
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(color: Colors.white, fontSize: 20),
                 noOfInstallments.toString(),
                 textAlign: TextAlign.center,

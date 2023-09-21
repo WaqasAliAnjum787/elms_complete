@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../../login_page/login_page.dart';
+import 'package:student_managmane_dashboard/Pages/login_page/module/home/presentation/home_screen.dart';
 
 class MyChooseBtn extends StatefulWidget {
   const MyChooseBtn({super.key});

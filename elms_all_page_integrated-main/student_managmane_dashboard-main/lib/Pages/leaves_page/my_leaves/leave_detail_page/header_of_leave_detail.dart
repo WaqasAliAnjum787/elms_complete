@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 
@@ -34,7 +35,8 @@ class HeaderOfLeaveDetail extends StatelessWidget {
                 border: Border.all(color: secondaryColor),
                 borderRadius: const BorderRadius.all(Radius.circular(30)),
                 color: Colors.white.withOpacity(0.3)),
-            child: const Text(
+            child: const AutoSizeText(
+              overflow: TextOverflow.ellipsis,
               'Leave Details',
               style: TextStyle(
                   color: Colors.black,

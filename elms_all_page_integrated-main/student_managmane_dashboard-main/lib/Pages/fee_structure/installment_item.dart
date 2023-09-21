@@ -1,5 +1,4 @@
-import 'dart:ui';
-
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 import 'package:student_managmane_dashboard/helper_comp/crad_clipper.dart';
@@ -38,7 +37,7 @@ class FeeInstallmentItem extends StatelessWidget {
           child: Container(
             alignment: Alignment.centerLeft,
             height: height * 0.12,
-            width: width * 0.3,
+            width: width * 0.40,
             decoration: const BoxDecoration(
                 color: secondaryColor,
                 borderRadius: BorderRadius.only(
@@ -47,16 +46,17 @@ class FeeInstallmentItem extends StatelessWidget {
                     topRight: Radius.circular(20))),
             child: Padding(
               padding: EdgeInsets.only(left: width * 0.02, right: width * 0.05),
-              child: Text(
+              child: AutoSizeText(
+                overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
                 installment,
-                style: TextStyle(color: Colors.white, fontSize: width * 0.048),
+                style: const TextStyle(color: Colors.white, fontSize: 18),
               ),
             ),
           ),
         ),
         Positioned(
-          left: width * 0.26,
+          left: width * 0.36,
           top: height * 0.03,
           child: Container(
             height: height * 0.06,
@@ -92,10 +92,11 @@ class FeeInstallmentItem extends StatelessWidget {
                   border: Border.all(color: Colors.black),
                   color: Colors.white,
                   shape: BoxShape.circle),
-              child: Text(
+              child: AutoSizeText(
                 installmentNumber.toString(),
+                overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.black, fontSize: width * 0.048),
+                style: const TextStyle(color: Colors.black, fontSize: 18),
               ),
             ))
       ]),

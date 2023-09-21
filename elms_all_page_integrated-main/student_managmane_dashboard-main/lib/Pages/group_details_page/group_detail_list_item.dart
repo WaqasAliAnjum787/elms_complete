@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 import 'package:student_managmane_dashboard/helper_comp/crad_clipper.dart';
@@ -47,7 +48,8 @@ class GroupDetailListItem extends StatelessWidget {
               fit: BoxFit.fill,
               child: Padding(
                 padding: EdgeInsets.only(right: width * 0.04),
-                child: Text(
+                child: AutoSizeText(
+                  overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,
                   leftSide,
                   style: const TextStyle(color: Colors.white),
@@ -85,7 +87,8 @@ class GroupDetailListItem extends StatelessWidget {
                 height: height * 0.12,
                 width: width * 0.32,
                 alignment: Alignment.center,
-                child: Text(
+                child: AutoSizeText(
+                  overflow: TextOverflow.visible,
                   textAlign: TextAlign.center,
                   rightSide,
                   style: const TextStyle(

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 import 'package:student_managmane_dashboard/Pages/fee_structure/installment_detail_page/installment_detail_item_clipper.dart';
@@ -31,7 +32,7 @@ class InstallmentDetailItem extends StatelessWidget {
           clipper: InstallmentDetailFirstClipper(),
           child: Container(
             height: height * 0.12,
-            width: width * 0.4,
+            width: width * 0.45,
             alignment: Alignment.center,
             decoration: const BoxDecoration(
                 color: secondaryColor,
@@ -40,9 +41,10 @@ class InstallmentDetailItem extends StatelessWidget {
                     bottomLeft: Radius.circular(20))),
             child: Padding(
               padding: EdgeInsets.only(right: width * 0.19, left: width * 0.02),
-              child: Text(
+              child: AutoSizeText(
+                overflow: TextOverflow.visible,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: width * 0.045),
+                style: TextStyle(color: Colors.white, fontSize: 18),
                 leftSide,
               ),
             ),
@@ -61,10 +63,10 @@ class InstallmentDetailItem extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(20),
                         bottomRight: Radius.circular(20))),
-                child: Text(
+                child: AutoSizeText(
+                    overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
-                    style:
-                        TextStyle(color: Colors.white, fontSize: width * 0.048),
+                    style: const TextStyle(color: Colors.white, fontSize: 18),
                     rightSide),
               ),
             ))

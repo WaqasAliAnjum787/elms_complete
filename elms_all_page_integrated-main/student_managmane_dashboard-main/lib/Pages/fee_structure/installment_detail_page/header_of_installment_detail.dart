@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 
@@ -36,7 +37,8 @@ class HeaderOfInstallmentDetails extends StatelessWidget {
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(30)),
                 color: Colors.white.withOpacity(0.1)),
-            child: const Text(
+            child: const AutoSizeText(
+              overflow: TextOverflow.ellipsis,
               'Installment Details',
               style: TextStyle(
                   color: Colors.black,

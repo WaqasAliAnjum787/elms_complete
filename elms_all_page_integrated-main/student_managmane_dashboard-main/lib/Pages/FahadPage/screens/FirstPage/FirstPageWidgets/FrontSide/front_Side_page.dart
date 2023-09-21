@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Pages/FahadPage/screens/FirstPage/FirstPageWidgets/FrontSide/FontWidgets/chooserule.dart';
-import 'package:student_managmane_dashboard/Pages/login_page/login_page.dart';
 import '../../../SuccessCasiansAnimatedListPage/casian_animated_list.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import '../../../CasianCoursesPage/courses_offer.dart';

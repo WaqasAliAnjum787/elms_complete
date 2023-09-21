@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 import 'package:student_managmane_dashboard/helper_comp/crad_clipper.dart';
@@ -49,7 +50,8 @@ class MyLeavePageItem extends StatelessWidget {
               fit: BoxFit.fill,
               child: Padding(
                 padding: EdgeInsets.only(right: width * 0.04),
-                child: Text(
+                child: AutoSizeText(
+                  overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,
                   leftSideText,
                   style:
@@ -91,14 +93,16 @@ class MyLeavePageItem extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      AutoSizeText(
+                        overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                         rightSideText,
                         style: TextStyle(
                             color: const Color.fromARGB(255, 255, 255, 255),
                             fontSize: width * 0.048),
                       ),
-                      Text(
+                      AutoSizeText(
+                        overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                         status,
                         style: TextStyle(

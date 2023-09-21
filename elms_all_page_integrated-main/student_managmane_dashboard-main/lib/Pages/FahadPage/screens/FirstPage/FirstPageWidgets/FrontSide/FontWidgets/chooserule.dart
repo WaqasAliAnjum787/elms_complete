@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Pages/FahadPage/screens/CasianCoursesPage/courses_offer.dart';
-import 'package:student_managmane_dashboard/Pages/login_page/login_page.dart';
+import 'package:student_managmane_dashboard/Pages/login_page/module/home/presentation/home_screen.dart';
 
 class CarousalAnimation extends StatefulWidget {
   const CarousalAnimation({super.key});

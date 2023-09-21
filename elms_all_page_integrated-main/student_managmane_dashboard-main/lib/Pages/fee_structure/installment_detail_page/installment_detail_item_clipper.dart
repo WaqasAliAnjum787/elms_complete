@@ -7,7 +7,7 @@ class InstallmentDetailFirstClipper extends CustomClipper<Path> {
     double width = size.width;
     Path path = Path();
     path.lineTo(width * 0.8, 0);
-    path.lineTo(width * 0.55, height * 0.5);
+    path.lineTo(width * 0.60, height * 0.5);
     path.lineTo(width * 0.80, height);
     path.lineTo(0, height);
     path.close();

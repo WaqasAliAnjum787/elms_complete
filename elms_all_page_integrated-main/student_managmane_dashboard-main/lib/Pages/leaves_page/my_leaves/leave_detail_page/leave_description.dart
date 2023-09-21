@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:student_managmane_dashboard/Colors/theme_colors.dart';
 
@@ -35,7 +36,8 @@ class LeaveDescription extends StatelessWidget {
                 decoration: const BoxDecoration(
                     color: secondaryColor,
                     borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Text(
+                child: AutoSizeText(
+                  overflow: TextOverflow.ellipsis,
                   'Leave Description',
                   style:
                       TextStyle(color: Colors.white, fontSize: height * 0.030),
