@@ -58,9 +58,9 @@ class FrontWidget extends StatelessWidget {
                 border: Border.all(
                   color: secondaryColor,
                 )),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 18.0, top: 5),
-              child: const Text(
+            child: const Padding(
+              padding: EdgeInsets.only(left: 18.0, top: 5),
+              child: Text(
                 'Tab to Swap',
                 textAlign: TextAlign.start,
                 style: TextStyle(fontSize: 15),
